@@ -44,7 +44,7 @@ async function fetchAndRewrite(request) {
   const rewriter = new HTMLRewriter()
     .on('img', new AttributeRewriter('src', 'external-content.duckduckgo.com', 'external-content.duckflare.com'))
     .on('link', new AttributeRewriter('href', 'duckduckgo.com', 'duckflare.com'))
-    // .on('img', new AttributeRewriter('src', 'duckduckgo.com', 'duckflare.com'));
+    .on('img', new AttributeRewriter('src', 'duckduckgo.com', 'duckflare.com'));
 
     return rewriter.transform(new Response(response.body, {
     status: response.status,
