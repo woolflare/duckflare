@@ -1,17 +1,15 @@
 # Cloudflare Worker for DuckDuckGo Reverse Proxy
 
-This Cloudflare Worker script acts as a reverse proxy, forwarding requests from your custom domain to DuckDuckGo's servers. It preserves the integrity of the original request headers and methods, ensuring that the proxy is transparent to both the user and DuckDuckGo.
+This Cloudflare Worker script acts as a reverse proxy, forwarding requests from your custom domain to DuckDuckGo's servers. It preserves the integrity of the original request headers and methods.
 
 ## Features
 
 - **Request Forwarding**: Automatically forwards requests to `html.duckduckgo.com`.
 - **Header Management**: Retains and manages headers to simulate requests coming directly from DuckDuckGo.
-- **Content-Type Adjustment**: Applies appropriate `Content-Type` headers for `POST` requests when necessary.
 
 ## Prerequisites
 
 - A Cloudflare account with access to Workers.
-- Basic knowledge of JavaScript and HTTP protocols.
 
 ## Setup Instructions
 
